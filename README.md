@@ -41,7 +41,7 @@ conformados por una sola etiqueta y pueden tener un atributo.
 
 📌 EXPLICACIÓN
 
-🔹 <!DOCTYPE html>
+🔹 `<!DOCTYPE html>`
 Declaramos el tipo de documento. Este elemento huérfano indica al navegador que el documento con el que está trabajando y que se deberá renderizar es HTML. Siempre debe estar en la primera línea.
 
 🔹 <html>
