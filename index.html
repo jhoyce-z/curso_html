@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Didy Solar Ccarhuas - Portafolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Manrope', 'sans-serif'],
+            },
+            colors: {
+              primary: '#0df269',
+              'primary-hover': '#0bc254',
+              'background-dark': '#102217',
+              'background-card': '#162e21',
+              'background-light': '#f5f8f7',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #102217;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #162e21;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0df269;
+      }
+      
+      .cursor-blink {
+        animation: blink 1s step-end infinite;
+      }
+      
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* Skill Card Flip Styles */
+      .skill-card {
+        transition: all 0.3s ease;
+      }
+      
+      .skill-content {
+        display: none;
+      }
+      
+      .skill-card.active .skill-logo {
+        display: none;
+      }
+      
+      .skill-card.active .skill-content {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+      
+      .toggle-btn {
+        transition: transform 0.3s ease;
+      }
+      
+      .skill-card.active .toggle-btn {
+        transform: rotate(45deg);
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+</head>
+<body class="bg-background-dark text-gray-200 font-display selection:bg-primary selection:text-background-dark relative overflow-x-hidden">
+
+    <!-- Decorative Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-[500px] bg-primary/5 blur-[120px] rounded-b-full pointer-events-none -z-10"></div>
+    <div class="fixed bottom-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-[1100px] mx-auto px-4 md:px-10 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="w-8 h-8 text-primary transition-transform duration-300 group-hover:rotate-12">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                        <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h2 class="text-white text-lg font-bold tracking-tight group-hover:text-primary transition-colors">
+                    Jhoyce-z
+                </h2>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full">Inicio</a>
+                <a href="#acerca-de" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full">Acerca de</a>
+                <a href="#servicios" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full">Servicios</a>
+                <a href="#proyectos" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full">Proyectos</a>
+                <a href="#blog" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full">Blog</a>
+                <a href="#contacto" class="text-sm font-medium text-gray-300 hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full">Contacto</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-primary">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 18 18"/></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-background-card border-b border-primary/20 overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <nav class="flex flex-col p-4">
+                <a href="#inicio" class="mobile-link py-3 px-4 text-gray-300 hover:text-primary hover:bg-white/5 rounded-lg transition-colors">Inicio</a>
+                <a href="#acerca-de" class="mobile-link py-3 px-4 text-gray-300 hover:text-primary hover:bg-white/5 rounded-lg transition-colors">Acerca de</a>
+                <a href="#servicios" class="mobile-link py-3 px-4 text-gray-300 hover:text-primary hover:bg-white/5 rounded-lg transition-colors">Servicios</a>
+                <a href="#proyectos" class="mobile-link py-3 px-4 text-gray-300 hover:text-primary hover:bg-white/5 rounded-lg transition-colors">Proyectos</a>
+                <a href="#blog" class="mobile-link py-3 px-4 text-gray-300 hover:text-primary hover:bg-white/5 rounded-lg transition-colors">Blog</a>
+                <a href="#contacto" class="mobile-link py-3 px-4 text-gray-300 hover:text-primary hover:bg-white/5 rounded-lg transition-colors">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="z-10 relative">
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="py-16 md:py-24 px-4 md:px-10 max-w-[1100px] mx-auto w-full animate-fade-in-up flex flex-col-reverse md:flex-row gap-12 items-center justify-between min-h-[90vh] pt-32">
+            <div class="flex flex-col gap-6 flex-1 text-center md:text-left z-10">
+                <div class="space-y-4">
+                    <div class="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-bold uppercase tracking-wider mb-2">
+                        Disponible para trabajar
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black leading-[1.1] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                        Juan Didy Solar Ccarhuas
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-primary font-medium">
+                        Desarrollador Web Full Stack Junior
+                    </h2>
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                        Hola 👋 Soy Estudiante de la carrera de Arquitectura de Plataformas y Servicios TIC, apasionado por el desarrollo web, las bases de datos y la creación de soluciones tecnológicas modernas.
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+                    <a href="#acerca-de" class="flex items-center justify-center px-8 py-3 bg-primary text-background-dark font-bold rounded-lg shadow-[0_0_20px_rgba(13,242,105,0.3)] hover:shadow-[0_0_30px_rgba(13,242,105,0.5)] hover:scale-105 transition-all duration-300">
+                        Descargar CV
+                    </a>
+                    <a href="#contacto" class="flex items-center justify-center px-8 py-3 border border-primary/30 text-primary font-bold rounded-lg hover:bg-primary/10 transition-all duration-300">
+                        Contactar
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative w-64 h-64 md:w-96 md:h-96 flex-shrink-0 group">
+                <div class="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
+                <div class="relative w-full h-full rounded-full border-4 border-primary/30 overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                    <img src="static/img/perfil.jpg" alt="Juan Didy Solar Ccarhuas" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="acerca-de" class="py-16 md:py-24 px-4 md:px-10 max-w-[1100px] mx-auto w-full animate-fade-in-up space-y-24">
+            <!-- Terminal -->
+            <div class="flex flex-col items-center gap-10">
+                <h2 class="text-4xl font-black text-white tracking-tight uppercase relative inline-block">
+                    Sobre Mí 
+                    <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-primary rounded-full"></span>
+                </h2>
+                
+<div class="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden bg-[#1e1e1e] shadow-2xl border border-primary/10 transform hover:scale-[1.01] transition-all duration-300">
+
+    <!-- Barra superior -->
+    <div class="bg-[#2d2d2d] px-4 py-3 flex items-center gap-2 border-b border-gray-700">
+
+        <!-- Botones -->
+        <div class="flex gap-2 mr-4">
+            <div class="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors"></div>
+        </div>
+
+        <!-- Nombre terminal -->
+        <div class="flex-1 text-center pr-12">
+            <span class="text-gray-400 text-xs font-mono tracking-wide">
+                bash — portfolio/jhoyce-z
+            </span>
+        </div>
+    </div>
+
+    <!-- Contenido terminal -->
+    <div class="p-6 md:p-8 font-mono text-sm md:text-base leading-relaxed bg-[#0c0c0c] min-h-[320px]">
+
+        <!-- Ruta -->
+        <div class="mb-6 text-lg">
+            <span class="text-red-500 font-bold">
+                C:\portfolio\Juan-Didy
+            </span>
+        </div>
+
+        <!-- Bienvenida -->
+        <div class="mb-4">
+            <span class="text-primary font-bold">
+                $ Hola, bienvenido a mi portafolio:
+            </span>
+        </div>
+
+        <!-- Typing -->
+        <div class="text-gray-300 whitespace-pre-line">
+            <span id="typing-text"></span>
+            <span id="cursor"
+                class="inline-block w-2 h-5 ml-1 bg-primary align-middle cursor-blink">
+            </span>
+        </div>
+
+    </div>
+</div>
+
+<script>
+const text = `
+Hola, soy Juan Didy Solar Ccarhuas 👋
+
+Estudiante de Arquitectura de Plataformas
+y Servicios TIC.
+
+Apasionado por el desarrollo web,
+bases de datos y tecnologías modernas.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+> Tecnologías:
+
+✔ HTML, CSS y JavaScript
+✔ Python y Django
+✔ MySQL y Docker
+✔ Linux y redes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+> Perfil:
+
+Desarrollador Junior enfocado
+en crear soluciones funcionales,
+modernas y escalables.
+
+Actualmente continúo aprendiendo
+y desarrollando proyectos reales.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+$ Gracias por visitar mi portafolio 🚀
+`;
+
+const typingText = document.getElementById('typing-text');
+
+let index = 0;
+
+function typeEffect() {
+    if (index < text.length) {
+        typingText.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 18);
+    }
+}
+
+window.addEventListener('load', typeEffect);
+</script>
+
+            <!-- Skills - INTERACTIVE CARDS -->
+            <div class="flex flex-col items-center gap-12">
+                <h2 class="text-3xl font-black text-white tracking-tight uppercase relative inline-block text-center">
+                    Habilidades Tecnológicas
+                    <span class="block text-sm font-normal text-gray-400 mt-2 normal-case">Click en las tarjetas para ver detalles</span>
+                </h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 w-full">
+                    <!-- HTML5 -->
+                    <div class="skill-card bg-white rounded-xl p-8 flex flex-col items-center justify-between aspect-[4/5] md:aspect-square shadow-xl hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden cursor-pointer" data-skill="html">
+                        <div class="skill-logo w-full h-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                            <img src="static/img/html.png" alt="HTML5" class="w-24 h-24 md:w-32 md:h-32 drop-shadow-sm object-contain">
+                        </div>
+                        <div class="skill-content hidden text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">HTML5</h3>
+                            <p class="text-sm text-gray-600">Estructuración semántica de plantillas en Django. Creación de sistemas accesibles y organizados como SISGESA y ARKIT System.</p>
+                        </div>
+                        <button class="toggle-btn absolute bottom-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg hover:bg-primary hover:text-white transition-colors">
+                            +
+                        </button>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="skill-card bg-white rounded-xl p-8 flex flex-col items-center justify-between aspect-[4/5] md:aspect-square shadow-xl hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden cursor-pointer" data-skill="css">
+                        <div class="skill-logo w-full h-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                            <img src="static/img/css.png" alt="CSS3" class="w-24 h-24 md:w-32 md:h-32 drop-shadow-sm object-contain">
+                        </div>
+                        <div class="skill-content hidden text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">CSS3</h3>
+                            <p class="text-sm text-gray-600">Diseño responsivo de paneles administrativos. Implementación de animaciones y transiciones para mejor experiencia de usuario.</p>
+                        </div>
+                        <button class="toggle-btn absolute bottom-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg hover:bg-primary hover:text-white transition-colors">
+                            +
+                        </button>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="skill-card bg-white rounded-xl p-8 flex flex-col items-center justify-between aspect-[4/5] md:aspect-square shadow-xl hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden cursor-pointer" data-skill="js">
+                        <div class="skill-logo w-full h-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                            <img src="static/img/js.jpeg" alt="JavaScript" class="w-24 h-24 md:w-32 md:h-32 drop-shadow-sm object-contain">
+                        </div>
+                        <div class="skill-content hidden text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">JavaScript</h3>
+                            <p class="text-sm text-gray-600">Interactividad del lado del cliente. Validaciones de formularios en tiempo real y modales dinámicos en sistemas de reservas.</p>
+                        </div>
+                        <button class="toggle-btn absolute bottom-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg hover:bg-primary hover:text-white transition-colors">
+                            +
+                        </button>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="skill-card bg-white rounded-xl p-8 flex flex-col items-center justify-between aspect-[4/5] md:aspect-square shadow-xl hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden cursor-pointer" data-skill="python">
+                        <div class="skill-logo w-full h-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                            <img src="static/img/python.jpeg" alt="Python" class="w-24 h-24 md:w-32 md:h-32 drop-shadow-sm object-contain">
+                        </div>
+                        <div class="skill-content hidden text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Python</h3>
+                            <p class="text-sm text-gray-600">Núcleo de desarrollos backend. Lógica de negocio, modelos y ORM en Django para sistemas de reservas y control de inventarios.</p>
+                        </div>
+                        <button class="toggle-btn absolute bottom-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg hover:bg-primary hover:text-white transition-colors">
+                            +
+                        </button>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="skill-card bg-white rounded-xl p-8 flex flex-col items-center justify-between aspect-[4/5] md:aspect-square shadow-xl hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden cursor-pointer" data-skill="mysql">
+                        <div class="skill-logo w-full h-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                            <img src="static/img/mysql.png" alt="MySQL" class="w-24 h-24 md:w-32 md:h-32 drop-shadow-sm object-contain">
+                        </div>
+                        <div class="skill-content hidden text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">MySQL</h3>
+                            <p class="text-sm text-gray-600">Gestión de bases de datos relacionales complejas. Diseño de tablas normalizadas para transacciones eficientes de ventas y reservas.</p>
+                        </div>
+                        <button class="toggle-btn absolute bottom-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg hover:bg-primary hover:text-white transition-colors">
+                            +
+                        </button>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="skill-card bg-white rounded-xl p-8 flex flex-col items-center justify-between aspect-[4/5] md:aspect-square shadow-xl hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden cursor-pointer" data-skill="docker">
+                        <div class="skill-logo w-full h-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                            <img src="static/img/docker.png" alt="Docker" class="w-24 h-24 md:w-32 md:h-32 drop-shadow-sm object-contain">
+                        </div>
+                        <div class="skill-content hidden text-center">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Docker</h3>
+                            <p class="text-sm text-gray-600">Implementación de contenedores para aislar entornos de desarrollo. Facilita el despliegue y evita conflictos de dependencias.</p>
+                        </div>
+                        <button class="toggle-btn absolute bottom-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg hover:bg-primary hover:text-white transition-colors">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="py-16 md:py-24 px-4 md:px-10 max-w-[1100px] mx-auto w-full animate-fade-in-up bg-background-dark/50">
+            <div class="flex flex-col gap-4 mb-12">
+                <h2 class="text-3xl font-bold text-white">Servicios</h2>
+                <p class="text-gray-400 max-w-2xl">
+                    Ofrezco una gama completa de servicios tecnológicos para potenciar tu presencia digital y optimizar tu infraestructura.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group p-8 bg-background-card rounded-2xl border border-primary/10 hover:border-primary/50 hover:bg-background-card/80 hover:-translate-y-2 transition-all duration-300 shadow-lg">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary text-primary group-hover:text-background-dark transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Instalación de programas</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Sistemas operativos, ofimática, programas de edición CorelDRAW , diseño y producción SketchUp.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group p-8 bg-background-card rounded-2xl border border-primary/10 hover:border-primary/50 hover:bg-background-card/80 hover:-translate-y-2 transition-all duration-300 shadow-lg">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary text-primary group-hover:text-background-dark transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><rect width="6" height="6" x="16" y="16" rx="1"/><rect width="6" height="6" x="2" y="16" rx="1"/><rect width="6" height="6" x="9" y="2" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Redes de telecomunicación</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        cableado de red Rj45, fibra óptica y servicios de red.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group p-8 bg-background-card rounded-2xl border border-primary/10 hover:border-primary/50 hover:bg-background-card/80 hover:-translate-y-2 transition-all duration-300 shadow-lg">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary text-primary group-hover:text-background-dark transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Desarrollo de sitios web</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Landing Pages, páginas web, sistemas web .
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="proyectos" class="py-16 md:py-24 px-4 md:px-10 max-w-[1100px] mx-auto w-full animate-fade-in-up space-y-20">
+            <!-- Projects Grid -->
+            <div class="space-y-8">
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-3xl font-bold text-white">Proyectos Destacados</h2>
+                    <p class="text-gray-400">Una selección de mis trabajos recientes.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group relative rounded-xl overflow-hidden border border-primary/10 bg-background-card hover:shadow-[0_0_30px_rgba(13,242,105,0.15)] transition-all duration-500">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="static/img/project3.jpg" alt="Demo Proyecto Uno" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1">
+                            <div class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="px-6 py-2 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-background-dark cursor-pointer transition-colors">
+                                    Ver Detalles
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider">Desarrollo Web</span>
+                            <h3 class="text-white text-xl font-bold mt-2 group-hover:text-primary transition-colors">SISTEMA DE REPORTES COMUNITARIOS</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group relative rounded-xl overflow-hidden border border-primary/10 bg-background-card hover:shadow-[0_0_30px_rgba(13,242,105,0.15)] transition-all duration-500">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="static/img/project2.jpg" alt="Demo Proyecto Dos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1">
+                            <div class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="px-6 py-2 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-background-dark cursor-pointer transition-colors">
+                                    Ver Detalles
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider">Desarrollo Web</span>
+                            <h3 class="text-white text-xl font-bold mt-2 group-hover:text-primary transition-colors">ARKIT SYSTEM</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="group relative rounded-xl overflow-hidden border border-primary/10 bg-background-card hover:shadow-[0_0_30px_rgba(13,242,105,0.15)] transition-all duration-500">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="static/img/project1.jpg" alt="Demo Proyecto Tres" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1">
+                            <div class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="px-6 py-2 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-background-dark cursor-pointer transition-colors">
+                                    Ver Detalles
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider">Desarrollo Web</span>
+                            <h3 class="text-white text-xl font-bold mt-2 group-hover:text-primary transition-colors">SISGESA</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="space-y-8">
+                <h3 class="text-2xl font-bold text-white border-l-4 border-primary pl-4">Lo que dicen mis clientes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div class="p-8 bg-gradient-to-br from-background-card to-background-dark border border-primary/10 rounded-2xl relative">
+                        <div class="absolute top-6 right-8 text-6xl text-primary/10 font-serif">"</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="https://picsum.photos/id/64/100/100" alt="Cliente Uno" class="w-14 h-14 rounded-full border-2 border-primary/30">
+                            <div>
+                                <h4 class="text-white font-bold">Cliente Uno</h4>
+                                <p class="text-primary text-sm">CEO de TechCorp</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 italic relative z-10 leading-relaxed">
+                            "Un trabajo excepcional. La atención al detalle y la profesionalidad superaron nuestras expectativas. ¡Muy recomendable!"
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="p-8 bg-gradient-to-br from-background-card to-background-dark border border-primary/10 rounded-2xl relative">
+                        <div class="absolute top-6 right-8 text-6xl text-primary/10 font-serif">"</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="https://picsum.photos/id/65/100/100" alt="Cliente Dos" class="w-14 h-14 rounded-full border-2 border-primary/30">
+                            <div>
+                                <h4 class="text-white font-bold">Cliente Dos</h4>
+                                <p class="text-primary text-sm">Fundadora de Innovate</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 italic relative z-10 leading-relaxed">
+                            "El proceso fue fluido y el resultado final fue exactamente lo que necesitábamos para crecer. Un verdadero profesional."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-16 md:py-24 px-4 md:px-10 max-w-[1100px] mx-auto w-full animate-fade-in-up pb-20">
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                
+                <!-- Contact Form -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-bold text-white">Contacto</h2>
+                        <p class="text-gray-300">
+                            ¿Tienes un proyecto en mente? Hablemos. Estoy disponible para colaboraciones y nuevas oportunidades.
+                        </p>
+                    </div>
+
+                    <form class="space-y-4" onsubmit="event.preventDefault();">
+                        <div class="space-y-2">
+                            <label for="name" class="text-sm font-medium text-gray-400">Nombre Completo</label>
+                            <input id="name" type="text" class="w-full bg-background-card border border-primary/20 rounded-lg p-4 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email" class="text-sm font-medium text-gray-400">Correo Electrónico</label>
+                            <input id="email" type="email" class="w-full bg-background-card border border-primary/20 rounded-lg p-4 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Ej. juan@correo.com">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="message" class="text-sm font-medium text-gray-400">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full bg-background-card border border-primary/20 rounded-lg p-4 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full flex items-center justify-center gap-2 bg-primary text-background-dark font-bold py-4 rounded-lg hover:bg-opacity-90 hover:shadow-[0_0_20px_rgba(13,242,105,0.4)] transition-all transform hover:-translate-y-1">
+                            <span>Enviar Mensaje</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info Box -->
+                <div class="space-y-8 h-full flex flex-col justify-center">
+                    <div class="p-10 bg-gradient-to-br from-background-card to-background-dark rounded-2xl border border-primary/10 shadow-2xl relative overflow-hidden group">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-700"></div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-6 relative z-10">¿Prefieres escribir directamente?</h3>
+                        <p class="text-gray-400 mb-8 relative z-10 leading-relaxed">
+                            Siempre estoy interesado en escuchar nuevas ideas y proyectos. No dudes en enviarme un correo electrónico directamente.
+                        </p>
+                        
+                        <a href="mailto:contactozky@gmail.com" class="inline-flex items-center gap-3 text-primary font-bold text-xl hover:text-white transition-colors relative z-10 group/link">
+                            <span class="border-b-2 border-primary group-hover/link:border-white transition-colors">contactozky@gmail.com</span>
+                            <span class="transform group-hover/link:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-primary/10 bg-background-card pt-12 pb-8">
+        <div class="max-w-[1100px] mx-auto px-4 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="text-white font-bold text-lg">Jhoyce-z</h3>
+                <p class="text-sm text-gray-500 mt-1">© <span id="year"></span> Todos los derechos reservados.</p>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="https://github.com/jhoyce-z" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-500 hover:text-primary transition-colors hover:scale-110 transform duration-200"
+                    aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-primary transition-colors hover:scale-110 transform duration-200" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-primary transition-colors hover:scale-110 transform duration-200" aria-label="Dribbble">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 9.42 8 13.23"/><path d="M16.33 22.85c-.87-2.64-1.34-5.16-1.58-7.93"/><path d="M11 21.95c.67-2.9.27-5.68-.93-7.78"/><path d="M22 12.05c-3-.6-6-.5-8.6.6"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
