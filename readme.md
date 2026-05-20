@@ -1,84 +1,85 @@
-👋 Hola, soy Juan Didy Solar Ccarhuas
-Estudiante de Arquitectura de Plataformas y Servicios TIC 🎓
-Aprendiendo a crear soluciones web con pasión y dedicación 💻
-🚀 Sobre mí
-¡Hola! 👋 Soy un estudiante apasionado por el mundo de la tecnología. Estoy comenzando mi camino en el desarrollo web y cada día aprendo algo nuevo.
-Lo que me gusta:
+# 👋 Hola, soy Juan Didy Solar Ccarhuas
 
-✨ Crear páginas web funcionales y bonitas
-🗄️ Trabajar con bases de datos
-🐍 Aprender Python y Django
-🧩 Resolver problemas con código
-📚 Seguir aprendiendo todos los días
+🎓 Estudiante de Arquitectura de Plataformas y Servicios TIC  
+💻 Apasionado por el desarrollo web y la tecnología  
+🚀 Construyendo soluciones con código, disciplina y aprendizaje constante  
 
-💻 Lo que estoy aprendiendo
+---
 
-🌱 Frontend:
-   • HTML5 - Estructura de páginas
-   • CSS3 - Estilos y diseño responsivo
-   • JavaScript - Interactividad básica
+## 🧑‍💻 Sobre mí
 
-🌱 Backend:
-   • Python - Lógica de programación
-   • Django - Framework para web apps
+Soy un estudiante en formación en el mundo del desarrollo web.  
+Me enfoco en aprender tecnologías modernas para crear aplicaciones funcionales, limpias y escalables.
 
-🌱 Herramientas:
-   • MySQL - Bases de datos
-   • Docker - Contenedores (en proceso)
-   • Git - Control de versiones
+💡 Actualmente me encuentro fortaleciendo mis habilidades en frontend, backend y bases de datos.
 
-💡 Nota: Estoy en constante aprendizaje. ¡Cada proyecto me enseña algo nuevo!
-📦 Mis Proyectos
+---
 
-🎯 SISGESA
-Sistema de gestión para control de inventarios y ventas.
-1 Tecnologías: Python • Django • MySQL • HTML/CSS
+## 🛠️ Tecnologías que estoy aprendiendo
 
-🏗 ARKIT SYSTEM
-Plataforma web para gestión de proyectos.
-1 Tecnologías: Django • JavaScript • CSS3
+### 🌐 Frontend
+- HTML5 → estructura web
+- CSS3 → diseño y responsive
+- JavaScript → interactividad
 
-📋 Sistema de Reportes Comunitarios
-Aplicación para reportar y seguir incidencias locales.
-1 Tecnologías: Django • MySQL • Bootstrap
-🔗 Pronto agregaré enlaces para ver las demos en vivo
+### ⚙️ Backend
+- Python → lógica y programación
+- Django → desarrollo web
 
-🛠️ Servicios que ofrezco
-Como estudiante, estoy disponible para colaborar en:
+### 🗄️ Bases de datos
+- MySQL → consultas y relaciones
 
-![alt text](image.png)
-Servicio
-¿En qué puedo ayudar?
-🌐 Páginas web simples
-Landing pages, portafolios, sitios informativos
-🔧 Instalación de software
-Programas de oficina, diseño, sistemas operativos
-🔌 Soporte básico de redes
-Cableado RJ45, configuración de conexiones
-⚠️ Siempre comunico claramente lo que puedo hacer y lo que estoy aprendiendo
+### 🧰 Herramientas
+- Git & GitHub → control de versiones
+- Docker → contenedores (básico)
 
-📚 Mi ruta de aprendizaje
-✅ HTML y CSS básicos
-✅ JavaScript fundamental
-✅ Python desde cero
-✅ Django - modelos y vistas
-🔄 MySQL - consultas y relaciones
-🔄 Docker - conceptos básicos
-⏳ Next.js / React (próximo)
-⏳ Testing y buenas prácticas
+---
 
-📬 ¿Hablamos?
-Me encantaría conectar con otros estudiantes, mentores o personas interesadas en colaborar.
-📧 Email: contactozky@gmail.com
-🐙 GitHub: https://github.com/jhoyce-z
-📍 Ubicación: Perú 🇵🇪
+## 📦 Proyectos
 
-✉️ ¿Cuándo escribirme?
-✅ Si tienes un proyecto pequeño para practicar
-✅ Si quieres compartir recursos de aprendizaje
-✅ Si buscas un compañero para un proyecto estudiantil
-✅ Si tienes consejos para un desarrollador junior 🙏
-🌟 Agradecimientos
-A mis profesores por guiarme en este camino
-A la comunidad open source por sus tutoriales y código abierto
-A ti, por visitar mi perfil 💙
+### 🎯 SIGSESA
+Sistema de gestión de inventarios y ventas  
+**Tecnologías:** Python · Django · MySQL · HTML/CSS  
+
+---
+
+### 🏗 ARKIT SYSTEM
+Plataforma web para gestión de proyectos  
+**Tecnologías:** Django · JavaScript · CSS3  
+
+---
+
+### 📋 Sistema de Reportes Comunitarios
+Aplicación para reportar incidencias locales  
+**Tecnologías:** Django · MySQL · Bootstrap  
+
+---
+
+## 📈 Ruta de aprendizaje
+
+✔ HTML y CSS  
+✔ JavaScript básico  
+✔ Python desde cero  
+✔ Django (modelos y vistas)  
+🔄 MySQL avanzado  
+🔄 Docker básico  
+⏳ React / Next.js  
+⏳ Testing y buenas prácticas  
+
+---
+
+## 📬 Contacto
+
+- 📧 Email: contactozky@gmail.com  
+- 🐙 GitHub: https://github.com/jhoyce-z  
+- 📍 Perú 🇵🇪  
+
+---
+
+## 🌟 Objetivo
+
+Convertirme en un desarrollador web profesional capaz de crear sistemas reales y escalables, aportando valor a proyectos tecnológicos.
+
+---
+
+⭐ Gracias por visitar mi perfil
