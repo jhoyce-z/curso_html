@@ -3,10 +3,6 @@
 
 Documento que sirve para describir qué hace nuestro proyecto.
 
-🧠 Markdown
-
-Markdown versión mejorada de HTML utiliza parte semántica.
-
 🌐 HTML
 
 HTML es el lenguaje de marcado de texto que nos permite estructurar nuestra página web.
@@ -19,6 +15,7 @@ En algunos casos encontraremos elementos huérfanos; estos solo están
 conformados por una sola etiqueta y pueden tener un atributo.
 
 🧩 ESTRUCTURA DE UN ELEMENTO HTML
+
 <div>hola mundo</div>
 
 🔍 Explicación
@@ -59,6 +56,10 @@ Elemento de título de página, es el hijo de <head> y define el título que apa
 🔹 <body>
 Contiene el contenido visible del documento HTML.
 
+📌 ORGANIZACIÓN
+
+
+
 🧱 ESTRUCTURA SEMÁNTICA
 
 La estructura semántica organiza el contenido para que el documento sea más claro y profesional. 
@@ -75,8 +76,70 @@ En HTML, la semántica indica el papel o significado de cada elemento, no solo s
 | `<footer>`  | pie de página            |
 
 
+⭐ ETIQUETAS MÁS USADAS
 
-📌 ORGANIZACIÓN
+| Etiqueta   | Función                     |
+| ---------- | --------------------------- |
+| `<h1>`     | Título principal            |
+| `<h2>`     | Subtítulo                   |
+| `<h3>`     | Título secundario           |
+| `<p>`      | Crear párrafo               |
+| `<a>`      | Crear enlaces               |
+| `<img>`    | Insertar imagen             |
+| `<button>` | Botón interactivo           |
+| `<strong>` | Texto importante (negrita)  |
+| `<em>`     | Texto con énfasis (cursiva) |
+| `<br>`     | Salto de línea              |
+| `<hr>`     | Línea horizontal            |
+| `<ul>`     | Lista con viñetas           |
+| `<ol>`     | Lista numerada              |
+| `<li>`     | Elemento de lista           |
+| `<div>`    | Contenedor genérico         |
+| `<span>`   | Contenedor en línea         |
+
+
+💻 Ejemplo
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejemplo HTML</title>
+</head>
+
+<body>
+
+<h1>Mi Página Web</h1>
+
+<h2>Bienvenido</h2>
+
+<p>Este es un ejemplo de las etiquetas más usadas en HTML.</p>
+
+<p>
+    HTML es <strong>importante</strong> para crear páginas web.
+</p>
+
+<h2>Lista de tareas</h2>
+
+<ul>
+    <li>Aprender HTML</li>
+    <li>Practicar CSS</li>
+    <li>Usar JavaScript</li>
+</ul>
+
+<h2>Enlace</h2>
+
+<p>
+    Visita:
+    <a href="https://github.com/">GitHub</a>
+</p>
+
+<hr>
+
+<p>Línea de separación arriba 👆</p>
+
+</body>
+
+</html>
 
 1️⃣ README.md
 Primero va el README.md porque allí se describe el proyecto y su funcionamiento.
@@ -103,6 +166,7 @@ Mientras más pequeño sea el número, más importante será el título.
 
 📖 Tipos de encabezados
 
+<!-- Encabezados HTML -->
 | Etiqueta | Uso              |
 | -------- | ---------------- |
 | `<h1>`   | Título principal |
@@ -128,32 +192,19 @@ Se usa para organizar información.
 📄 PÁRRAFOS Y ÉNFASIS
 
 Los párrafos sirven para escribir texto.
-
 También podemos resaltar palabras importantes.
 
-📖 Etiquetas
-
-| Etiqueta   | Función          |
-| ---------- | ---------------- |
-| `<p>`      | Crear párrafo    |
-| `<strong>` | Texto importante |
-| `<em>`     | Dar énfasis      |
-
-
-💻 Ejemplo
-<p>Estoy aprendiendo HTML.</p>
+<!-- Párrafos y énfasis -->
+<p>Este es un párrafo de ejemplo.</p>
 
 <p>
-HTML es <strong>importante</strong>
-para crear páginas web.
+HTML es <strong>importante</strong> para aprender desarrollo web.
 </p>
-🔍 ¿Qué ocurre aquí?
-<p> crea un párrafo.
-<strong> resalta la palabra “importante”.
+
 
 📋 LISTAS
 
-Las listas sirven para ordenar información.
+Las listas sirven para organizar información en forma ordenada o con viñetas.
 
 📖 Tipos de listas
 
@@ -192,7 +243,8 @@ Resultado:
 
 Lavar arroz
 Cocinar pollo
-💬 Citas y referencias
+
+💬 CITAS Y REFERENCIAS
 
 Sirven para mostrar frases importantes.
 
