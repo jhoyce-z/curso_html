@@ -32,38 +32,38 @@ conformados por una sola etiqueta y pueden tener un atributo.
 
 🏗️ ESTRUCTURA FUNDAMENTAL DEL DOCUMENTO HTML
 
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Mi Página</title>
-        </head>
-        <body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página</title>
+</head>
+<body>
 
-        </body>
-        </html>
+</body>
+</html>
 
 📌 EXPLICACIÓN
 
-🔹 <!DOCTYPE html>
+🔹 '<!DOCTYPE html>'
 
 Declaramos el tipo de documento. Este elemento huérfano indica al navegador que 
 el documento con el que está trabajando y que se deberá renderizar es HTML. 
 Siempre debe estar en la primera línea.
 
-🔹 <html><html>
+🔹'<html>'
 
 Elemento raíz, envuelve todo el contenido de la página HTML. Este elemento tiene hijos principales.
 
-🔹 <head><head>
+🔹'<head>'
 
 Elemento de configuración, contiene información importante sobre el documento como título, 
 enlaces CSS, información para motores de búsqueda y descripción, entre otros.
 
-🔹 <title><title>
+🔹'<title>'
 
 Elemento de título de página, es el hijo de <head> y define el título que aparecerá en la pestaña del navegador.
 
-🔹 <body><body>
+🔹'<body>'
 
 Contiene el contenido visible del documento HTML.
 
@@ -72,14 +72,16 @@ Contiene el contenido visible del documento HTML.
 La estructura semántica organiza el contenido para que el documento sea más claro y profesional. 
 En HTML, la semántica indica el papel o significado de cada elemento, no solo su apariencia.
 
-Etiqueta	Función
-<header>	encabezado
-<nav>	navegación
-<main>	contenido principal
-<section>	sección temática
-<article>	contenido independiente
-<aside>	contenido complementario
-<footer>	pie de página
+| Etiqueta    | Función                  |
+| ----------- | ------------------------ |
+| `<header>`  | encabezado               |
+| `<nav>`     | navegación               |
+| `<main>`    | contenido principal      |
+| `<section>` | sección temática         |
+| `<article>` | contenido independiente  |
+| `<aside>`   | contenido complementario |
+| `<footer>`  | pie de página            |
+
 
 
 📌 ORGANIZACIÓN
