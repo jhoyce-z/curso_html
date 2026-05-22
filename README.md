@@ -16,7 +16,9 @@ conformados por una sola etiqueta y pueden tener un atributo.
 
 🧩 ESTRUCTURA DE UN ELEMENTO HTML
 
+```html
 <div>hola mundo</div>
+```
 
 🔍 Explicación
 | Parte        |            Explicación                                          |
@@ -24,7 +26,8 @@ conformados por una sola etiqueta y pueden tener un atributo.
 | `<div>`      | Etiqueta de apertura. Indica el inicio del elemento. |
 | `hola mundo` | Contenido que se mostrará dentro del elemento.       |
 | `</div>`     | Etiqueta de cierre. Indica el final del elemento.    |
-| `div`        | Nombre del elemento HTML utilizado. 
+| `div`        | Nombre del elemento HTML utilizado.  |
+
 
 
 🏗️ ESTRUCTURA FUNDAMENTAL DEL DOCUMENTO HTML
@@ -99,6 +102,8 @@ En HTML, la semántica indica el papel o significado de cada elemento, no solo s
 
 
 💻 Ejemplo
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -140,6 +145,7 @@ En HTML, la semántica indica el papel o significado de cada elemento, no solo s
 </body>
 
 </html>
+```
 
 1️⃣ README.md
 Primero va el README.md porque allí se describe el proyecto y su funcionamiento.
@@ -178,14 +184,17 @@ Mientras más pequeño sea el número, más importante será el título.
 
 
 💻 Ejemplo
+
+```html
 <h1>Mi Página Web</h1>
 <h2>Sobre mí</h2>
 <h3>Mis hobbies</h3>
+```
 
 🔍 ¿Qué ocurre aquí?
-<h1> crea el título más grande e importante.
-<h2> crea un subtítulo.
-<h3> crea un tema secundario.
+- `<h1>` crea el título principal.
+- `<h2>` crea un subtítulo.
+- `<h3>` crea un tema secundario.
 
 Se usa para organizar información.
 
@@ -195,11 +204,13 @@ Los párrafos sirven para escribir texto.
 También podemos resaltar palabras importantes.
 
 <!-- Párrafos y énfasis -->
+```html
 <p>Este es un párrafo de ejemplo.</p>
 
 <p>
 HTML es <strong>importante</strong> para aprender desarrollo web.
 </p>
+```
 
 
 📋 LISTAS
@@ -216,13 +227,16 @@ Las listas sirven para organizar información en forma ordenada o con viñetas.
 
 
 💻 Ejemplo
+
+```html
 <ul>
     <li>Arroz</li>
     <li>Pollo</li>
 </ul>
+```
 🔍 ¿Qué ocurre aquí?
-<ul> crea una lista con puntos.
-<li> agrega elementos dentro de la lista.
+- `<ul>` crea una lista con puntos.
+- `<li>` agrega elementos dentro de la lista.
 
 Resultado:
 
@@ -232,12 +246,15 @@ Resultado:
 💻 LISTA ORDENADA
 
 💻 Ejemplo ordenado
+```html
 <ol>
     <li>Lavar arroz</li>
     <li>Cocinar pollo</li>
 </ol>
+```
+
 🔍 ¿Qué ocurre aquí?
-<ol> crea una lista numerada.
+- `<ol>` crea una lista numerada.
 
 Resultado:
 
@@ -257,14 +274,16 @@ Sirven para mostrar frases importantes.
 
 
 💻 Ejemplo
+```html
 <blockquote>
 "La práctica hace al maestro."
 </blockquote>
 
 <cite>Autor desconocido</cite>
+```
 🔍 ¿Qué ocurre aquí?
-<blockquote> muestra una frase destacada.
-<cite> muestra quién dijo la frase.
+- `<blockquote>` muestra una frase destacada.
+- `<cite>` muestra quién dijo la frase.
 
 💻 CÓDIGO Y TEXTO TÉCNICO
 
@@ -279,11 +298,13 @@ Sirve para mostrar código HTML sin ejecutarlo.
 
 
 💻 Ejemplo
+```html
 <pre>
 <code>
 <h1>Hola Mundo</h1>
 </code>
 </pre>
+```
 🔍 ¿Qué ocurre aquí?
 
 El navegador mostrará el código tal como está escrito.
@@ -302,6 +323,7 @@ Sirven para separar contenido.
 
 
 💻 Ejemplo
+```html
 <p>Hola</p>
 
 <hr>
@@ -310,9 +332,10 @@ Sirven para separar contenido.
 Bienvenido<br>
 a HTML
 </p>
+```
 🔍 ¿Qué ocurre aquí?
-<hr> dibuja una línea.
-<br> baja a la siguiente línea.
+- `<hr>` dibuja una línea.
+- `<br>` baja a la siguiente línea.
 
 Resultado:
 
