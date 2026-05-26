@@ -261,7 +261,7 @@ Resultado:
 Lavar arroz
 Cocinar pollo
 
-💬 CITAS Y REFERENCIAS
+# 💬 CITAS Y REFERENCIAS
 
 Sirven para mostrar frases importantes.
 
@@ -285,7 +285,7 @@ Sirven para mostrar frases importantes.
 - `<blockquote>` muestra una frase destacada.
 - `<cite>` muestra quién dijo la frase.
 
-💻 CÓDIGO Y TEXTO TÉCNICO
+# 💻 CÓDIGO Y TEXTO TÉCNICO
 
 Sirve para mostrar código HTML sin ejecutarlo.
 
@@ -311,7 +311,7 @@ El navegador mostrará el código tal como está escrito.
 
 No lo ejecutará.
 
-📏 LÍNEAS Y SALTOS
+# 📏 LÍNEAS Y SALTOS
 
 Sirven para separar contenido.
 
@@ -345,3 +345,26 @@ Hola
 
 Bienvenido
 a HTML
+
+# CSS (cascading style sheet) --------> 
+cascada de hojas de estilo
+css es el documento que nos permite darle estilo a nuestros elementos, pósicionar, 
+escalar, formato,  color y tranciciones.
+
+## COMO APLICAR CSS A NUESTRO DOCUMENTO HTML
+### 1. En linea
+esta manera de aplicar css es haciendo uso de los atributos de un elemento
+en este caso en especial usando  `style`
+´´´html
+<p style="color: pink;size:23px">este el texto<p/> // em rem
+´´´
+> [!TIP] en el caso de los embebidos y los de archivo externo hay que entender sobre
+selectores: son manera de como yo identifico un elemento dentro de un documento html, selector por etiqueta
+, id y clase, en el diseño web se recomienda solo usar los selectores de tipo clase.
+
+### 2. Embebidos
+este tipo de aplicar estilos nos permite hacer uso de la etiqueta style para poder
+estilar nuestros elementos, por convencion esta etiqueta al ser de configuracion se debe usar en `<head>`
+html´´´
+
+### 3. Archivo externo
