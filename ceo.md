@@ -1,206 +1,459 @@
-¿Qué es SEO?
-SEO = Optimización para Motores de Búsqueda. Es el conjunto de técnicas para que tu página web aparezca en las primeras posiciones de Google cuando alguien busca algo relacionado.
+# 🔍 GUÍA COMPLETA DE SEO
 
-¿Por qué es importante?
+### *Search Engine Optimization*
 
-75% de usuarios no pasa de la primera página de Google
+> Aprende desde cero cómo posicionar páginas web en Google utilizando técnicas modernas de SEO.
 
-El primer resultado recibe 32% de los clics
+---
 
-Más visibilidad = más tráfico gratuito = más clientes
+<br>
 
-¿Cómo funciona Google?
-Rastreo (Crawling): Bots (Googlebot) recorren internet descubriendo páginas
+# 📚 ¿QUÉ ES SEO?
 
-Indexación: Google guarda tu contenido en su base de datos
+SEO significa:
 
-Clasificación (Ranking): Cuando alguien busca, Google muestra resultados ordenados por relevancia
+```txt id="n4clw8"
+Search Engine Optimization
+Optimización para Motores de Búsqueda
+```
 
-Palabras Clave (Keywords)
-Son los términos que escriben los usuarios en Google.
+Es el conjunto de técnicas utilizadas para lograr que una página web aparezca en los primeros resultados de Google cuando una persona realiza una búsqueda.
 
-| Tipo                      | Ejemplo                        | Cuándo usar                               |
-| ------------------------- | ------------------------------ | ----------------------------------------- |
-| Short-tail (1-2 palabras) | "zapatos"                      | Mucho tráfico, mucha competencia          |
-| Long-tail (3+ palabras)   | "zapatos deportivos nike Lima" | Menos competencia, tráfico más específico |
+---
 
-Consejo: Empieza con long-tail si eres principiante.
+<br>
 
-Herramientas gratuitas:
+# 🎯 ¿POR QUÉ ES IMPORTANTE EL SEO?
 
-Google Keyword Planner
+El SEO ayuda a:
 
-Google Trends
+✅ Obtener más visitas
+✅ Conseguir tráfico gratuito
+✅ Aumentar clientes potenciales
+✅ Mejorar la visibilidad de una marca
+✅ Generar confianza y autoridad
 
-Ubersuggest
+---
 
-SEO On-Page (Dentro de tu página)
-1. Título (Title Tag)
+## 📊 DATOS IMPORTANTES
 
+| 📌 Estadística                             | 📈 Valor |
+| ------------------------------------------ | -------- |
+| Usuarios que NO pasan de la primera página | 75%      |
+| Clics que recibe el primer resultado       | 32%      |
+| Búsquedas desde móviles                    | 60%+     |
 
+---
+
+<br>
+
+# ⚙️ ¿CÓMO FUNCIONA GOOGLE?
+
+Google funciona en 3 etapas principales:
+
+---
+
+# 1️⃣ RASTREO (CRAWLING)
+
+Google utiliza robots llamados:
+
+```txt id="3h07wm"
+Googlebot
+```
+
+Estos bots recorren internet descubriendo nuevas páginas web.
+
+---
+
+# 2️⃣ INDEXACIÓN (INDEXING)
+
+Google almacena la información encontrada en su base de datos.
+
+---
+
+# 3️⃣ CLASIFICACIÓN (RANKING)
+
+Cuando un usuario busca algo, Google organiza los resultados según:
+
+* relevancia
+* calidad
+* velocidad
+* experiencia del usuario
+* autoridad
+
+---
+
+<br>
+
+# 🔑 PALABRAS CLAVE (KEYWORDS)
+
+Las keywords son los términos que las personas escriben en Google.
+
+---
+
+## 📌 TIPOS DE KEYWORDS
+
+| 🏷 Tipo    | 💡 Ejemplo                     | 🎯 Uso            |
+| ---------- | ------------------------------ | ----------------- |
+| Short-tail | `zapatos`                      | Mucha competencia |
+| Long-tail  | `zapatos deportivos nike lima` | Más específico    |
+
+---
+
+## 💡 CONSEJO SEO
+
+Si eres principiante:
+
+✅ Usa keywords long-tail
+❌ Evita competir con palabras demasiado generales
+
+---
+
+## 🛠 HERRAMIENTAS GRATUITAS
+
+* Google Keyword Planner
+* Google Trends
+* Ubersuggest
+
+---
+
+<br>
+
+# 🧩 SEO ON-PAGE
+
+### *(Dentro de tu página)*
+
+Es la optimización interna del sitio web.
+
+---
+
+# 1️⃣ TITLE TAG
+
+```html id="apd6hq"
 <title>Pizzería Italiana en Lima - Delivery 30min | PizzaLima</title>
-50-60 caracteres
+```
 
-Incluye palabra clave al inicio
+### ✅ Buenas prácticas
 
-Atrae clics
+* 50–60 caracteres
+* incluir keyword principal
+* atractivo para el usuario
 
-1. Meta Descripción
+---
 
+# 2️⃣ META DESCRIPTION
 
+```html id="pj3q9e"
 <meta name="description" content="La mejor pizzería italiana en Lima. Delivery en 30 minutos. ¡Pide ahora!">
-150-160 caracteres
+```
 
-No afecta ranking directamente, pero sí los clics
+### ✅ Recomendaciones
 
-1. Encabezados (H1, H2, H3)
+* 150–160 caracteres
+* clara y atractiva
+* aumenta clics
 
+---
+
+# 3️⃣ ENCABEZADOS HTML
+
+```html id="11u7px"
 <h1>La Mejor Pizzería Italiana en Lima</h1>
-  <h2>Nuestro Menú</h2>
-    <h3>Pizzas Clásicas</h3>
-Solo un H1 por página
 
-Jerarquía lógica: H1 → H2 → H3
+<h2>Nuestro Menú</h2>
 
-4. Contenido de calidad
-Original, útil, relevante
+<h3>Pizzas Clásicas</h3>
+```
 
-500+ palabras para artículos
+---
 
-Bien organizado (párrafos, listas)
+## 📌 REGLAS
 
-5. Imágenes optimizadas
+✅ Solo un `<h1>` por página
+✅ Mantener jerarquía lógica
 
-<!-- ✅ Bueno -->
+```txt id="m2dr63"
+H1 → H2 → H3
+```
+
+---
+
+# 4️⃣ CONTENIDO DE CALIDAD
+
+Google premia contenido:
+
+✅ útil
+✅ original
+✅ bien organizado
+✅ relevante
+
+---
+
+## ✨ RECOMENDACIONES
+
+* usar listas
+* párrafos cortos
+* contenido claro
+* mínimo 500 palabras
+
+---
+
+# 5️⃣ OPTIMIZACIÓN DE IMÁGENES
+
+```html id="v2jqce"
 <img src="pizza-pepperoni-lima.jpg" alt="Pizza pepperoni pizzería italiana Lima">
-Nombre descriptivo con guiones
+```
 
-Alt text descriptivo
+---
 
-Comprime imágenes (TinyPNG)
+## ✅ Buenas prácticas
 
-6. URLs amigables
-| ❌ Mala              | ✅ Buena                              |
+* nombres descriptivos
+* usar guiones `-`
+* agregar atributo `alt`
+* comprimir imágenes
+
+---
+
+## 🖼 HERRAMIENTA RECOMENDADA
+
+```txt id="2g67o4"
+TinyPNG
+```
+
+---
+
+# 6️⃣ URLS AMIGABLES
+
+| ❌ Incorrecta        | ✅ Correcta                           |
 | ------------------- | ------------------------------------ |
-| tudominio.com/p=123 | tudominio.com/pizzería-italiana-lima |
+| tudominio.com/p=123 | tudominio.com/pizzeria-italiana-lima |
 
-7. Velocidad de carga
-Debe cargar en menos de 3 segundos
+---
 
-Herramientas: Google PageSpeed Insights, GTmetrix
+# 7️⃣ VELOCIDAD DE CARGA
 
-8. Diseño responsive (móvil)
-60%+ de búsquedas son desde móviles
+Una página debe cargar en:
 
-Google usa mobile-first indexing
+```txt id="jovm97"
+Menos de 3 segundos
+```
 
-Verifica con: Google Mobile-Friendly Test
+---
 
-SEO Off-Page (Fuera de tu página)
-1. Backlinks (enlaces de otros sitios a tu sitio)
-Son "votos de confianza" para Google.
+## 🛠 HERRAMIENTAS
 
-Ejemplo:
+* Google PageSpeed Insights
+* GTmetrix
 
-xml
-<a href="https://tupizzería.com">La mejor pizzería en Lima</a>
-Reglas:
+---
 
-Calidad > Cantidad: 10 backlinks buenos valen más que 1000 malos
+# 8️⃣ RESPONSIVE DESIGN
 
-Consigue backlinks naturalmente con contenido excelente
+Tu sitio debe verse bien en:
 
-Guest posting, infografías, directorios locales
+📱 móviles
+💻 computadoras
+📲 tablets
 
-❌ Evita:
+---
 
-Comprar backlinks
+## 📌 IMPORTANTE
 
-Spam en comentarios
+Google utiliza:
 
-Intercambio masivo de enlaces
+```txt id="jlwmv0"
+Mobile-First Indexing
+```
 
-2. Redes Sociales
-No afectan ranking directamente
+---
 
-Pero aumentan visibilidad y tráfico
+<br>
 
-3. SEO Local (para negocios locales)
-Registra en Google Business Profile (gratis)
+# 🌐 SEO OFF-PAGE
 
-Mantén mismo nombre, dirección, teléfono (NAP) en todos lados
+### *(Fuera de tu sitio web)*
 
-Pide reseñas a clientes
+Son acciones externas que ayudan al posicionamiento.
 
-Herramientas de SEO
-Gratuitas (¡Obligatorias!)
+---
 
-| Herramienta                 | Para qué sirve                      |
-| --------------------------- | ----------------------------------- |
-| Google Search Console       | Ver cómo aparece tu sitio en Google |
-| Google Analytics            | Ver visitas, origen, comportamiento |
-| Google Keyword Planner      | Volumen de búsqueda de keywords     |
-| Google PageSpeed Insights   | Velocidad de carga                  |
-| Google Mobile-Friendly Test | Ver si es amigable para móviles     |
+# 🔗 BACKLINKS
 
-De pago (profesionales)
-Ahrefs ($99/mes): backlinks, keywords, competencia
+Son enlaces desde otros sitios hacia tu web.
 
-SEMrush ($120/mes): análisis completo de SEO
+---
 
-Moz Pro ($99/mes): seguimiento de ranking
+## ✅ EJEMPLO
 
-Errores Comunes (A Evitar)
-| Error                               | Solución                            |
-| ----------------------------------- | ----------------------------------- |
-| Keyword stuffing (repetir keywords) | Escribe naturalmente para personas  |
-| Contenido duplicado                 | Escribe contenido original          |
-| Sitio lento                         | Comprime imágenes, usa buen hosting |
-| No es responsive                    | Diseña para móviles primero         |
-| No usar Search Console/Analytics    | Configúralos desde el día 1         |
-| Esperar resultados rápidos          | SEO toma 3-6 meses mínimo           |
+```html id="m0s4xg"
+<a href="https://tupizzeria.com">
+  La mejor pizzería en Lima
+</a>
+```
 
-Checklist de SEO Básico
-Antes de lanzar:
-Palabras clave investigadas
+---
 
-Título único por página (50-60 caracteres)
+## 📌 IMPORTANCIA
 
-Meta descripción por página (150-160 caracteres)
+Google interpreta los backlinks como:
 
-Solo un H1 por página
+```txt id="my87gz"
+Votos de confianza
+```
 
-Imágenes optimizadas (nombre + alt)
+---
 
-URLs amigables
+## ✅ Buenas prácticas
 
-Sitio rápido (<3 segundos)
+* conseguir enlaces naturales
+* crear contenido útil
+* guest posting
+* directorios locales
 
-Sitio responsive
+---
 
-SSL instalado (https://)
+## ❌ EVITA
 
-Después de lanzar:
-Google Search Console configurado
+* comprar backlinks
+* spam
+* intercambio masivo de enlaces
 
-Google Analytics configurado
+---
 
-Google Business Profile (si es local)
+# 📱 REDES SOCIALES
 
-Crear contenido regularmente
+Las redes sociales:
 
-Conseguir backlinks de calidad
+✅ aumentan tráfico
+✅ generan visibilidad
 
-Compartir en redes sociales
+---
 
-PARA RECORDAR
+# 🏪 SEO LOCAL
 
-| Concepto     | Qué es                                                  |
-| ------------ | ------------------------------------------------------- |
-| SEO          | Optimizar para aparecer primero en Google               |
-| Keywords     | Palabras que buscan los usuarios                        |
-| SEO On-Page  | Optimización dentro de tu sitio                         |
-| SEO Off-Page | Backlinks y señales externas                            |
-| Backlinks    | Enlaces de otros sitios a tu sitio (votos de confianza) |
-| Velocidad    | Páginas lentas pierden ranking                          |
-| Móvil        | 60%+ búsquedas son desde móviles                        |
+Ideal para:
+
+* restaurantes
+* talleres
+* tiendas
+* negocios físicos
+
+---
+
+# 📍 GOOGLE BUSINESS PROFILE
+
+Debes registrar:
+
+* nombre
+* dirección
+* teléfono
+* horarios
+
+---
+
+# ⭐ RESEÑAS
+
+Las reseñas ayudan al SEO local.
+
+---
+
+<br>
+
+# 🛠 HERRAMIENTAS SEO GRATUITAS
+
+| 🧰 Herramienta        | ⚡ Función             |
+| --------------------- | --------------------- |
+| Google Search Console | Rendimiento en Google |
+| Google Analytics      | Análisis de visitas   |
+| Keyword Planner       | Keywords              |
+| PageSpeed Insights    | Velocidad             |
+| Mobile-Friendly Test  | Compatibilidad móvil  |
+
+---
+
+# 💰 HERRAMIENTAS PROFESIONALES
+
+| 🛠 Herramienta | 🎯 Función           |
+| -------------- | -------------------- |
+| Ahrefs         | Backlinks y keywords |
+| SEMrush        | Auditoría SEO        |
+| Moz Pro        | Seguimiento SEO      |
+
+---
+
+<br>
+
+# ❌ ERRORES SEO COMUNES
+
+| ❌ Error             | ✅ Solución                   |
+| ------------------- | ---------------------------- |
+| Keyword stuffing    | Escribir naturalmente        |
+| Contenido duplicado | Crear contenido original     |
+| Sitio lento         | Optimizar imágenes           |
+| No responsive       | Diseño mobile-first          |
+| No usar Analytics   | Configurarlo desde el inicio |
+
+---
+
+# ✅ CHECKLIST SEO BÁSICO
+
+## 🚀 ANTES DE PUBLICAR
+
+* [x] keywords investigadas
+* [x] title optimizado
+* [x] meta description
+* [x] un H1
+* [x] imágenes optimizadas
+* [x] URLs amigables
+* [x] sitio rápido
+* [x] responsive
+* [x] HTTPS activo
+
+---
+
+## 📈 DESPUÉS DE PUBLICAR
+
+* [ ] configurar Search Console
+* [ ] configurar Analytics
+* [ ] crear contenido constante
+* [ ] compartir en redes sociales
+* [ ] conseguir backlinks
+
+---
+
+<br>
+
+# 📌 CONCEPTOS CLAVE
+
+| 📚 Concepto  | 🧠 Significado           |
+| ------------ | ------------------------ |
+| SEO          | Optimización para Google |
+| Keywords     | Palabras de búsqueda     |
+| SEO On-Page  | Optimización interna     |
+| SEO Off-Page | Señales externas         |
+| Backlinks    | Enlaces externos         |
+| Responsive   | Adaptable a móviles      |
+| Velocidad    | Tiempo de carga          |
+
+---
+
+# 🏁 CONCLUSIÓN
+
+El SEO permite:
+
+✅ aumentar visibilidad
+✅ atraer tráfico gratuito
+✅ mejorar posicionamiento
+✅ conseguir clientes
+
+---
+
+## 🔥 CLAVE DEL SEO
+
+```txt id="l2frn0"
+Contenido útil
++ buena experiencia de usuario
++ optimización técnica
+= mejor posicionamiento en Google
+```
