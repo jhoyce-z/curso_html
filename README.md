@@ -346,25 +346,138 @@ Hola
 Bienvenido
 a HTML
 
-# CSS (cascading style sheet) --------> 
-cascada de hojas de estilo
-css es el documento que nos permite darle estilo a nuestros elementos, pósicionar, 
-escalar, formato,  color y tranciciones.
+# CSS (Cascading Style Sheets)
 
-## COMO APLICAR CSS A NUESTRO DOCUMENTO HTML
-### 1. En linea
-esta manera de aplicar css es haciendo uso de los atributos de un elemento
-en este caso en especial usando  `style`
-´´´html
-<p style="color: pink;size:23px">este el texto<p/> // em rem
-´´´
-> [!TIP] en el caso de los embebidos y los de archivo externo hay que entender sobre
-selectores: son manera de como yo identifico un elemento dentro de un documento html, selector por etiqueta
-, id y clase, en el diseño web se recomienda solo usar los selectores de tipo clase.
+> **Cascada de hojas de estilo**  
+> CSS es el lenguaje que nos permite dar **estilo** a nuestros elementos HTML: posicionar, escalar, formatear, aplicar colores y transiciones.
 
-### 2. Embebidos
-este tipo de aplicar estilos nos permite hacer uso de la etiqueta style para poder
-estilar nuestros elementos, por convencion esta etiqueta al ser de configuracion se debe usar en `<head>`
-html´´´
+---
 
-### 3. Archivo externo
+## 📌 ¿Cómo aplicar CSS a un documento HTML?
+
+Existen **3 formas** de aplicar CSS:
+
+| Tipo | Descripción | Cuándo usarlo |
+|------|-------------|---------------|
+| **En línea** | Directamente en el elemento con `style` | Pruebas rápidas, estilos muy específicos |
+| **Embebido** | En la etiqueta `<style>` dentro de `<head>` | Proyectos pequeños, páginas únicas |
+| **Externo** | Archivo `.css` separado conectado con `<link>` | **Recomendado**: proyectos reales, reutilización |
+
+---
+
+## 1️⃣ CSS en Línea
+
+Se aplica directamente en el elemento usando el atributo `style`.
+
+```html
+<p style="color: pink; font-size: 23px;">Este es el texto</p>
+```
+
+⚠️ **Desventaja:** mezcla contenido con estilo, difícil de mantener.
+
+---
+
+## 2️⃣ CSS Embebido
+
+Se usa la etiqueta `<style>` dentro del `<head>` del HTML.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    p {
+      color: blue;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <p>Este texto es azul y mide 18px</p>
+</body>
+</html>
+```
+
+✅ **Ventaja:** todo el CSS está en un solo archivo HTML.
+
+---
+
+## 3️⃣ CSS Externo ⭐ (Recomendado)
+
+Se crea un archivo `.css` separado y se conecta al HTML con `<link>`.
+
+### 📁 Estructura de archivos
+
+mi-proyecto/
+├── index.html
+└── estilos.css
+
+
+### 📄 Archivo: `estilos.css`
+
+```css
+p {
+  color: green;
+  font-size: 20px;
+}
+
+.boton {
+  background: blue;
+  color: white;
+  padding: 10px;
+}
+```
+
+### 📄 Archivo: `index.html`
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <p>Este texto es verde y mide 20px</p>
+  <button class="boton">Botón estilizado</button>
+</body>
+</html>
+```
+
+✅ **Ventajas:**
+- Separa estilo del contenido
+- Reutilizable en múltiples páginas
+- Más fácil de mantener y escalar
+
+---
+
+## 🎯 Selectores CSS (Importante)
+
+Para usar CSS embebido o externo necesitas entender **selectores**:
+
+| Selector | Ejemplo | Descripción |
+|----------|---------|-------------|
+| **Etiqueta** | `p { }` | Selecciona todos los `<p>` |
+| **ID** | `#mi-id { }` | Selecciona un elemento único (`id="mi-id"`) |
+| **Clase** | `.mi-clase { }` | Selecciona elementos con `class="mi-clase"` ⭐ |
+
+> [!RECOMENDACIÓN]
+> En diseño web se recomienda **usar solo selectores de tipo clase** (`.nombre`), ya que son reutilizables y más flexibles.
+
+---
+
+## 📋 Resumen rápido
+
+| Método | Código | Recomendación |
+|--------|--------|---------------|
+| En línea | `<p style="...">` | ❌ Solo para pruebas rápidas |
+| Embebido | `<style>...</style>` | ⚠️ Proyectos pequeños |
+| Externo | `<link href="estilos.css">` | ✅ **Recomendado** para proyectos reales |
+
+---
+
+## 💡 Tips importantes
+
+- **Unidades de medida:** usa `em` o `rem` para tamaños de texto (escalables)
+- **Archivos externos:** siempre pon `<link>` dentro del `<head>`
+- **Convención:** nombra tu archivo CSS como `estilos.css` o `style.css`
+- **Selectores:** prioriza clases (`.nombre`) sobre IDs (`#nombre`)
