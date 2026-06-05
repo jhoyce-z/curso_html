@@ -43,3 +43,4 @@
 | **Soporte de Width/Height** | ✅ **Sí** los respeta | ❌ **No** los altera *(Los ignora)* | No puedes cambiar el tamaño de una etiqueta `<span>` o `<a>` directamente en CSS. |
 | **Uso de Padding/Margin** |  **Completo** *(Arriba, abajo, lados)* | 🟡 **Parcial** *(Solo izquierda y derecha)* | El margen superior e inferior no desplaza a otros elementos en etiquetas inline. |
 | **Uso Principal** | 🏗️ Estructurar y maquetar layouts | 🎨 Estilizar texto o micro-interacciones | Los bloques crean el esqueleto de la web; las líneas decoran el contenido interno. |"." 
+"." 
