@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Index.html</title>
-
-    <style>
-        .color-rojo {
-            color: red;
-        }
-
-        .fuente {
-            font-size: 50px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <p style="color:#676BE5; font-size:40px;
-    font-weight:600; font-family:sans-serif;">
-        Hola Alumnitos <b>Inteligentes</b>.
-    </p>
-
-    <p class="color-rojo">
-        Esto es otro estilo
-    </p>
-
-</body>
-
+    <head>
+        <title>Mi Primer Ejemplo CSS</title>
+        <style>
+            /* Aquí estoy usando selectores de tipo clase para aplicar estilos */
+            .texto-verde {
+                color: green;
+            }
+            .tamaño-grande {
+                font-size: 45px;
+            }
+            /* Ahora uso selectores de tipo etiqueta o nombre */
+            span {
+                background: orange;
+            }
+            h1 {
+                background: purple;
+                color: white;
+            }
+        </style>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- En esta línea aplico estilos en línea, es decir, directamente en la etiqueta
+        usando el atributo style para darle formato -->
+        <p style="color: #e30707;
+        font-size: 38px;
+        font-weight: 700;">Hola Compañeros 
+        Aplicados</p>
+        <p class="texto-verde tamaño-grande"> Este es otro estilo diferente</p>
+        <span>Yo soy un span con fondo de color</span>
+        <h1>Bienvenidos</h1>
+    </body>
 </html>
