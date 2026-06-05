@@ -47,3 +47,4 @@
 | **`<em>`** |  En Línea | ❌ **No** | Enfatizar expresiones o términos (Cursiva). |
 | **`<img>`** |  En Línea | ⚠️ **Sí** *(Excepción)* | Incrustar recursos visuales en la interfaz. |
 | **`<button>`** | 🟨 En Línea | ⚠️ **Sí** *(Excepción)* | Servir como disparador de acciones interactivas. |
+"." 
