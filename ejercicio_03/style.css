@@ -1,4 +1,38 @@
-body{
-    background: rgb(red
-    );
+/*selectores basicos*/
+/*por etiqueta*/
+
+body {
+    background: #FFFDD0; /*color crema para todo el fondo de la pagina*/
+}
+
+p{
+    color:blue; /*esta propiedad es para darle color al contenido*/
+}
+.boton{
+    background: red;
+}
+/* por atributo*/
+input[type="text"]{
+    color: brown;
+}
+/*combinado: hijo directo*/
+nav > a{
+    text-decoration: none; /* propiedad para quitar el subrarado de las etiquetas a */
+}
+
+/* MODELO DE CAJA*/
+div {
+    background: pink;
+    width: 50%; /*ancho del elemento*/
+    height: 40px; /*alto del elemento*/
+
+    /* padding se usa para el espacio que debe tener el contenido dentro de la caja*/
+    padding-top: 5px;
+    padding-left: 10px;
+
+    /*padding :5px; esto le dara 5 pixeles a los 4 lados del padding */
+    border-radius: 8px; /*esquinas redondeadas*/
+    border: 2px solid black; /**/
+
+    margin: 20px;
 }

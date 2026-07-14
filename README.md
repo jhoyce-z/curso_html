@@ -487,3 +487,32 @@ Para usar CSS embebido o externo necesitas entender selectores:
 - **Archivos externos:** siempre pon `<link>` dentro del `<head>`
 - **Convención:** nombra tu archivo CSS como `estilos.css` o `style.css`
 - **Selectores:** prioriza clases (`.nombre`) sobre IDs (`#nombre`)
+
+> [!TIP] **Observacion:** averiguar que es una ruta relativa y que es una ruta absoluta.
+
+Ruta absoluta: indica la ubicación completa de un archivo.
+
+>Ejemplo: C:\Users\LENOVO\Desktop\curso_html
+C:\Users\Solar\Documentos\index.html
+
+Ruta relativa: indica la ubicación tomando como referencia la carpeta actual.
+
+>Ejemplo
+'''txt
+## tenemos en mi carpeta del proyecto un archivo llamado 'logo.png' como aceder a este
+archivo usando un aruta absoluta
+C:\Users\LENOVO\Desktop\curso_html
+
+Si estás en Documentos, entonces:
+
+index.html
+imagenes/logo.png
+../css/estilos.css
+
+Diferencia rápida:
+
+Absoluta = camino completo.
+
+Relativa = camino desde donde estás.
+
+
